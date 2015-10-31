@@ -13,12 +13,12 @@ from threading import Thread
 from contextlib import contextmanager
 
 
-def _catchbind(instance, target):
+def _catchbind(self, target):
     def wrapper():
         try:
-            instance.val = target()
+            self.val = target()
         except BaseException as err:
-            instance.err = err
+            self.err = err
     return wrapper
 
 
