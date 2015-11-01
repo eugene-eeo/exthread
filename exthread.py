@@ -30,10 +30,10 @@ class ExThread(object):
     :param args: Sequence of positional arguments to be passed.
     :param kwargs: Mapping of keyword arguments to be passed.
     """
+    err = None
+    val = None
 
     def __init__(self, target, args=(), kwargs={}, **kw):
-        self.err = None
-        self.val = None
         self.thread = Thread(target=_catchbind(self, target),
                              args=args,
                              kwargs=kwargs,
