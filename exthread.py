@@ -27,8 +27,8 @@ class ExThread(object):
     Exception propogating thread.
 
     :param target: Target function to execute.
-    :param args: Positional arguments to be passed.
-    :param kwargs: Keyword arguments to be passed.
+    :param args: Sequence of positional arguments to be passed.
+    :param kwargs: Mapping of keyword arguments to be passed.
     """
 
     def __init__(self, target, args=(), kwargs={}, **kw):
