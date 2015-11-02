@@ -10,7 +10,6 @@
 """
 
 from threading import Thread
-from contextlib import contextmanager
 
 
 def _catchbind(self, target):
