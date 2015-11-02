@@ -21,4 +21,18 @@ your back with some exception. Usage example:
         ...
     IndexError: ...
 
+The API is deliciously simple:
+
+.. code-block:: python
+
+    >>> def task(a, b=1):
+            return [a, b]
+
+    >>> t = ExThread(task, (1,), dict(b=2))
+    >>> t.start()
+    >>> t.join()
+    [1, 2]
+    >>> assert t.err is None
+    >>> assert t.val == [1, 2]
+
 You don't really need it. **But you want it.**
