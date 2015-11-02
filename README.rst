@@ -2,7 +2,10 @@ ExThread
 ========
 
 Supercharged (sensible) execption propogating and lightweight
-wrapper around the standard library Thread. Usage example:
+wrapper around the standard library Thread. Basically ensures
+that you don't have to perform cartwheels just to ensure that
+the execution of your threaded tests/programs do not fail behind
+your back with some exception. Usage example:
 
 .. code-block:: python
 
@@ -18,4 +21,4 @@ wrapper around the standard library Thread. Usage example:
         ...
     IndexError: ...
 
-You don't really need it. *But you want it.*
+You don't really need it. **But you want it.**

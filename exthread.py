@@ -14,9 +14,9 @@ from contextlib import contextmanager
 
 
 def _catchbind(self, target):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         try:
-            self.val = target()
+            self.val = target(*args, **kwargs)
         except BaseException as err:
             self.err = err
     return wrapper

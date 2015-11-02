@@ -29,3 +29,15 @@ def test_exthread_join_exception():
         thread.join()
 
     assert isinstance(thread.err, IndexError)
+
+
+def test_args_kwargs():
+    def task(a, b, c=1, d=1):
+        assert a == 2
+        assert b == 2
+        assert c == 2
+        assert d == 2
+
+    thread = ExThread(task, (2,2), dict(c=2, d=2))
+    thread.start()
+    thread.join()
