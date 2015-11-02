@@ -17,7 +17,7 @@ class PyTest(TestCommand):
 
 setup(
     name='exthread',
-    version='0.0.1',
+    version='0.1.0',
     description='Supercharged threads',
     long_description=open('README.rst', 'rb').read().decode('utf8'),
     author='Eeo Jun',
