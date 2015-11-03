@@ -1,5 +1,4 @@
-|logo| ExThread
-===============
+.. image:: https://github.com/eugene-eeo/exthread/raw/master/images/logo.png
 
 ExThread is an MIT-licensed library that provides supercharged
 threads - basically an opinionated wrapper around standard library
@@ -39,5 +38,3 @@ from the git repository::
     $ git clone git@github.com:eugene-eeo/exthread.git
     $ cd exthread
     $ pip install --editable .
-
-.. |logo| image:: https://github.com/eugene-eeo/exthread/raw/master/images/small.png
