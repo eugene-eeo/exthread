@@ -24,4 +24,4 @@ executing, as well as obtain the return value of the task::
     >>> t.join()
     1
 
-.. |logo| image:: https://github.com/eugene-eeo/exthread/raw/master/images/logo.png
+.. |logo| image:: https://github.com/eugene-eeo/exthread/raw/master/images/small.png
