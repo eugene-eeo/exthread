@@ -24,7 +24,7 @@ def _catchbind(self, target):
 
 class ExThread(object):
     """
-    Exception propogating thread.
+    Exception propagating thread.
 
     :param target: Target function to execute.
     :param args: Sequence of positional arguments to be passed.

@@ -3,7 +3,7 @@
 
 ExThread is an MIT-licensed library that provides supercharged
 threads - basically an opinionated wrapper around standard library
-Threads that allows for exception propogation. Because we deserve
+Threads that allows for exception propagation. Because we deserve
 better exception semantics when writing/testing multithreaded
 programs.
 
