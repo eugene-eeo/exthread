@@ -2,6 +2,12 @@ import sys
 from setuptools import setup
 from setuptools.command.test import test as TestCommand
 
+try:
+    from pypandoc import convert
+    read_md = lambda f: convert(f, 'rst')
+except ImportError:
+    read_md = lambda f: open(f, 'r').read()
+
 
 class PyTest(TestCommand):
     def finalize_options(self):
@@ -19,7 +25,7 @@ setup(
     name='exthread',
     version='0.1.1',
     description='Supercharged threads',
-    long_description=open('README.rst', 'rb').read().decode('utf8'),
+    long_description=read_md('README.md'),
     author='Eeo Jun',
     author_email='packwolf58@gmail.com',
     url='https://github.com/eugene-eeo/exthread/',
