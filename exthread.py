@@ -10,6 +10,7 @@
 """
 
 from threading import Thread
+from collections import deque
 
 
 def _catchbind(self, target):
@@ -56,3 +57,15 @@ class ExThread(object):
         if self.err:
             raise self.err
         return self.val
+
+
+class MQThread(ExThread):
+    def __init__(self, target, *args, **kwargs):
+        ExThread.__init__(self,
+                          lambda *a, **k: target(self, *a, **k),
+                          *args,
+                          **kwargs)
+        self.queue = deque()
+
+    def put(self, k):
+        self.queue.append(k)
