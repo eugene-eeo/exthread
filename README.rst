@@ -1,10 +1,5 @@
-ExThread
-========
-
-.. raw:: html
-
-    <img src='https://github.com/eugene-eeo/exthread/raw/master/images/logo.png'
-         align='left'/>
+|logo| ExThread
+===============
 
 Supercharged (sensible) execption propogating and lightweight
 wrapper around the standard library Thread. Basically ensures
@@ -41,3 +36,6 @@ The API is deliciously simple:
     >>> assert t.val == [1, 2]
 
 You don't really need it. **But you want it.**
+
+.. |logo| image:: https://github.com/eugene-eeo/exthread/raw/master/images/logo.png
+          :width: 60px
