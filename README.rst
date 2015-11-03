@@ -2,8 +2,10 @@
 ===============
 
 ExThread is an MIT-licensed library that provides supercharged
-threads that is basically a wrapper around threads that allows
-for exception propogation.
+threads - basically an opinionated wrapper around standard library
+Threads that allows for exception propogation. Because we deserve
+better exception semantics when writing/testing multithreaded
+programs.
 
 Usage:
 ------
@@ -23,5 +25,19 @@ executing, as well as obtain the return value of the task::
 
     >>> t.join()
     1
+
+Installation:
+-------------
+
+From PyPI::
+
+    $ pip install exthread
+
+For hacking on ExThread it is recommended that you install
+from the git repository::
+
+    $ git clone git@github.com:eugene-eeo/exthread.git
+    $ cd exthread
+    $ pip install --editable .
 
 .. |logo| image:: https://github.com/eugene-eeo/exthread/raw/master/images/small.png
