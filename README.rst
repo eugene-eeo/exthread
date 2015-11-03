@@ -1,8 +1,10 @@
 ExThread
 ========
 
-.. image:: images/logo.png
-   :align: left
+.. raw:: html
+
+    <img src='https://github.com/eugene-eeo/exthread/raw/master/images/logo.png'
+         align='left'/>
 
 Supercharged (sensible) execption propogating and lightweight
 wrapper around the standard library Thread. Basically ensures
