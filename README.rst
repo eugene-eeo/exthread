@@ -1,6 +1,9 @@
 ExThread
 ========
 
+.. image:: images/logo.png
+   :align: left
+
 Supercharged (sensible) execption propogating and lightweight
 wrapper around the standard library Thread. Basically ensures
 that you don't have to perform cartwheels just to ensure that
