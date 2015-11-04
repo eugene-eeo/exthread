@@ -10,6 +10,7 @@
 """
 
 from threading import Thread
+from contextlib import contextmanager
 from collections import deque
 
 
@@ -69,3 +70,9 @@ class MQThread(ExThread):
 
     def put(self, k):
         self.queue.append(k)
+
+    @contextmanager
+    def ready(self):
+        while not self.queue:
+            pass
+        yield

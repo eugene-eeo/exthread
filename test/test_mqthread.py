@@ -35,3 +35,14 @@ def test_put_message():
     mq2.start()
     mq1.join()
     assert mq2.join() == 1
+
+
+def test_ready():
+    def task(t):
+        with t.ready():
+            return t.queue.popleft()
+
+    mq = MQThread(task)
+    mq.put(1)
+    mq.start()
+    assert mq.join() == 1
