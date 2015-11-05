@@ -31,7 +31,7 @@ setup(
     ],
     include_package_data=True,
     package_data={'exthread': ['LICENSE', 'README.rst']},
-    py_modules=['exthread'],
+    packages=['exthread'],
     tests_require=['pytest'],
     cmdclass={'test': PyTest},
     platforms='any',
