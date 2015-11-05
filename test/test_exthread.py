@@ -8,6 +8,12 @@ def test_exthread_init():
     assert thread.err is None
 
 
+def test_exthread_join_return():
+    thread = ExThread(lambda: [])
+    thread.start()
+    assert thread.join() == []
+
+
 def test_exthread_join_value():
     thread = ExThread(lambda: [])
     thread.start()
