@@ -1,15 +1,6 @@
 from threading import Thread
 
 
-def _catchbind(self, target):
-    def wrapper(*args, **kwargs):
-        try:
-            self.val = target(*args, **kwargs)
-        except BaseException as err:
-            self.err = err
-    return wrapper
-
-
 class ExThread(object):
     """
     Exception propagating thread.
@@ -22,10 +13,17 @@ class ExThread(object):
     val = None
 
     def __init__(self, target, args=(), kwargs={}, **kw):
-        self.thread = Thread(target=_catchbind(self, target),
+        self.target = target
+        self.thread = Thread(target=self.run,
                              args=args,
                              kwargs=kwargs,
                              **kw)
+
+    def run(self, *args, **kwargs):
+        try:
+            self.val = self.target(*args, **kwargs)
+        except BaseException as err:
+            self.err = err
 
     def start(self):
         """

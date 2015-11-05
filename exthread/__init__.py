@@ -11,4 +11,3 @@
 
 
 from .core import ExThread
-from .mq import MQThread

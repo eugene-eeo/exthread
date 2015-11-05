@@ -1,5 +1,5 @@
 from pytest import raises
-from exthread import MQThread
+from exthread.mq import MQThread
 
 
 def test_thread_reference():
