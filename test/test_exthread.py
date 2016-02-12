@@ -2,12 +2,6 @@ from pytest import raises
 from exthread import ExThread
 
 
-def test_exthread_init():
-    thread = ExThread(lambda: [])
-    assert thread.val is None
-    assert thread.err is None
-
-
 def test_exthread_join_return():
     thread = ExThread(lambda: [])
     thread.start()
