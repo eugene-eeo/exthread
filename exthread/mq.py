@@ -1,3 +1,4 @@
+from functools import partial
 from contextlib import contextmanager
 from collections import deque
 from .core import ExThread
@@ -6,7 +7,7 @@ from .core import ExThread
 class MQThread(ExThread):
     def __init__(self, target, *args, **kwargs):
         ExThread.__init__(self,
-                          lambda *a, **k: target(self, *a, **k),
+                          partial(target, self),
                           *args,
                           **kwargs)
         self.queue = deque()
