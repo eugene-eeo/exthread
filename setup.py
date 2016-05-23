@@ -17,7 +17,7 @@ class PyTest(TestCommand):
 
 setup(
     name='exthread',
-    version='0.1.1',
+    version='0.1.2',
     description='Supercharged threads',
     long_description=open('README.rst', 'rb').read().decode('utf-8'),
     author='Eeo Jun',
@@ -31,7 +31,7 @@ setup(
     ],
     include_package_data=True,
     package_data={'exthread': ['LICENSE', 'README.rst']},
-    packages=['exthread'],
+    py_modules=['exthread'],
     tests_require=['pytest'],
     cmdclass={'test': PyTest},
     platforms='any',
